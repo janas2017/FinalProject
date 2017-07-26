@@ -47,15 +47,13 @@
   <a href="https://janas2017.github.io/FinalProject/home.html">Home</a>
   <a href="https://janas2017.github.io/FinalProject/about.html">About</a>
   <a href="https://janas2017.github.io/FinalProject/search.html">Search</a>
-  <button onclick="myFunction()" class="dropbtn">FAQ's</button></a>
+  <button onclick="myFunction()">FAQ's</button></a>
   <a href="https://janas2017.github.io/FinalProject/mycolleges.html">My Colleges</a>
 </div>	  	
 	
 	<style>
 
-.dropbtn:hover, .dropbtn:focus {
-    background-color: black;
-}
+
 
 .dropdown {
     position: relative;
@@ -94,6 +92,8 @@
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 function myFunction() {
+    document.getElementById("dropdown").classList.toggle("show");
+    document.getElementById("dropdown-content").classList.toggle("show");
     document.getElementById("myDropdown").classList.toggle("show");
 }
 	<div id="myDropdown" class="dropdown-content">
