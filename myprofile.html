@@ -6,116 +6,40 @@
 <link href="https://fonts.googleapis.com/css?family=Catamaran:500" rel="stylesheet">	  
   <style>
 	  
-	  input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-
-button {
-    background-color: #FBFBFB;
-    color: black;
-    padding: 14px 20px;
-    margin: 8px 0;
+.dropbtn {
+    background-color: #333;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
     border: none;
     cursor: pointer;
-    width: 100%;
-}
-
-button:hover {
-    opacity: 0.8;
-}
-
-
-.cancelbtn {
+    margin: 0;
     width: auto;
-    padding: 10px 18px;
-    background-color: black;
 }
-
-.container {
-    padding: 16px;
-}
-
-span.psw {
-    float: right;
-    padding-top: 16px;
-}
-
-
-.modal {
-    display: none;
-    position: fixed; 
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); 
-    padding-top: 60px;
-}
-
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto 15% auto; 
-    border: 1px solid #888;
-    width: 80%; 
-}
-
-
-.close {
-    position: absolute;
-    right: 25px;
-    top: 0;
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #B2BFD3;
     color: white;
-    font-size: 35px;
-    font-weight: bold;
 }
-
-.close:hover,
-.close:focus {
-    color: black;
-    cursor: pointer;
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
-
-
-.animate {
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #B2BFD3;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
-
-@-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)} 
-    to {-webkit-transform: scale(1)}
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
 }
-    
-@keyframes animatezoom {
-    from {transform: scale(0)} 
-    to {transform: scale(1)}
-}
-
-
-@media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
-    }
-    .cancelbtn {
-       width: 100%;
-    }
-	  .cancelbutton {
-       width: 100%;
-    }
-}
-	  
-	  
+.show {display:block;}
   body {
   font-family: 'Quicksand', sans-serif;
   color: white;
@@ -270,46 +194,62 @@ input {
   <a href="https://janas2017.github.io/FinalProject/home.html">Home</a>
   <a href="https://janas2017.github.io/FinalProject/about.html">About</a>
   <a href="https://janas2017.github.io/FinalProject/tools.html">Tools</a>
-  <a href="https://janas2017.github.io/FinalProject/FAQ.html">FAQ's</a>
-  <a class="active" href="https://janas2017.github.io/FinalProject/myprofile.html">My Profile</a>
-</div>	  	
-	
-	<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-
-<div id="id01" class="modal">
-  
-  <form class="modal-content animate" action="/action_page.php">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-    </div>
-
-    <div class="container">
-      <label><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-        
-      <button type="submit">Login</button>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbutton">Cancel</button>
-    </div>
-  </form>
-</div>
-
-<script>
-
-var modal = document.getElementById('id01');
-
-
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
+  <class="dropdown"> <button onclick="myFunction()" class="dropbtn">FAQ's</button>
+  <a href="https://janas2017.github.io/FinalProject/myprofile.html">My Profile</a>
+	<div id="myDropdown" class="dropdown-content">
+    <a onclick="ScrollA()">College Applications</a>
+    <a onclick="ScrollB()">Private vs Public University</a>
+    <a onclick="ScrollC()">Scholarships</a>
+    <a onclick="ScrollD()">Financial Aid</a>
+    <a onclick="ScrollE()">SAT and ACT</a>
+  </div>
+ 
+ 
+</div>	  
+	<script>
+	          function ScrollA() {
+		    window.location.assign("https://janas2017.github.io/FinalProject/FAQ.html#1")
+	          }
+	        </script>
+	<script>
+	          function ScrollB() {
+		    window.location.assign("https://janas2017.github.io/FinalProject/FAQ.html#2")
+	          }
+	        </script>
+	<script>
+	          function ScrollC() {
+			  window.location.assign("https://janas2017.github.io/FinalProject/FAQ.html#3")
+	          }
+	        </script>
+	<script>
+	          function ScrollD() {
+			  window.location.assign("https://janas2017.github.io/FinalProject/FAQ.html#4")
+	          }
+	        </script>
+	<script>
+	          function ScrollE() {
+			  window.location.assign("https://janas2017.github.io/FinalProject/FAQ.html#5")
+	          }
+	        </script>
+	  
+	  
+	  <script>
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
 }
-	
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
   <div class="section">
 
     <h1 style="font-family: 'Quicksand', sans-serif;font-size: 100px; text-align:center">My Profile</h1><hr>
