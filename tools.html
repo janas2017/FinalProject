@@ -304,8 +304,116 @@ for (var i = 0; i < myResults.length;i++){
 }
 }
 
-
 </script>
 <br> <br>
+	<div style="
+	width:600 px;
+	height: 800 px;
+	background-color:#B2BFD3;
+	margin-bottom: -10 px
+	margin-top:-20 px">
+<br>			
+	<h1 style="font-family: 'Quicksand', sans-serif;font-size: 50px; text-align:center">SAT vs. ACT Quiz</h1>
+	
+	<div class="center">
+ 	  <style> 
+ input[type=text] {
+     width: 130px;
+     box-sizing: border-box;
+     border: 2px solid #ccc;
+     border-radius: 4px;
+     font-size: 16px;
+     background-color: white;
+     background-position: 10px 10px; 
+     background-repeat: no-repeat;
+     padding: 12px 20px 12px 40px;
+     -webkit-transition: width 0.4s ease-in-out;
+     transition: width 0.4s ease-in-out;
+ }
+ 
+ input[type=text]:focus {
+   width: 100%;
+}
+ </style>
+</head>
+<body>
+  <label>Which do you prefer for the mathematics section?<br>
+  A:<br> - Wider range of mathematic topics<br>
+  	 - More geometry and trignometry<br>
+  	 - No formulas provided<br>
+  	 - Allows calculators for all math questions<br><br>
+  B:<br> - Doesn't cover many topics, like trig functions and matrices<br>
+   	 - Less than 10% of math section is geometry and trignometry<br>
+   	 - Formulas provided<br>
+   	 - Has non-calculator and calculator math part<br><br>
+    <input type="text" id="userAnswer1"></input></label>
+  <br>
+  <br>
+    <label>Which do you prefer for the reading section?<br>
+ 	A:<br> 
+  	 - Does not give line numbers for details that are being referenced in question<br>
+  	 - Easier for those who can remember locations of details in passages<br>
+  	 - Does not require you to find supporting evidence in the passage for your answer<br><br>
+  B:<br> - Provides line numbers for details that are being referenced in question<br>
+   	 - Questions are also often given in chronological order<br>
+   	 - Has questions that ask for supporting evidence in passage<br><br>
+    <input type="text" id="userAnswer2"><br><br></input></label>
+
+  <label>Which do you prefer for the writing section?<br>
+  A:<br> 
+  	 - More focused on grammar, punctuation, and sentence structure. <br>
+  	 - Includes more "big picture" type questions<br><br>
+  B:<br> - Tests more for vocabulary<br>
+   	 - Focuses more on questions about writing style<br><br>
+    <input type="text" id="userAnswer3"></input>
+  <button type="button" onclick="totalFunction()">Submit</button></label>
+  <p style="color:red;" id="results"></p>
+<script>
+var aList = [];
+var bList = [];
+
+function quizResults() {
+var userAnswer4 = document.getElementById("userAnswer1").value;
+var userAnswer5 = document.getElementById("userAnswer2").value;
+var userAnswer6 = document.getElementById("userAnswer3").value;
+	if (userAnswer4 === "A") {
+		aList.push(userAnswer4)
+	} 
+	else if (userAnswer4 === "B") {
+		bList.push(userAnswer4)
+	}
+	if (userAnswer5 === "A"){
+		aList.push(userAnswer5)
+	}
+	else if (userAnswer5 === "B") {
+		bList.push(userAnswer5)
+	}
+	if (userAnswer6 === "A") {
+		aList.push(userAnswer6)
+	}
+	else if (userAnswer6 === "B") {
+		bList.push(userAnswer6)				
+	}
+}
+function checkResults() {
+	console.log(aList.length + " " + bList.length)
+	if (aList.length > bList.length) {
+		document.getElementById("results").innerHTML = "You should take the ACT"
+	}
+	
+	if (bList.length > aList.length) {
+		document.getElementById("results").innerHTML = "You should take the SAT	"
+	}
+
+}
+function totalFunction() {
+	quizResults();
+	checkResults();
+}
+
+
+</script>
+</div>
 </body>
+<br> <br>
 </html>
