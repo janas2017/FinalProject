@@ -375,7 +375,7 @@ for (var i = 0; i < myResults.length;i++){
    	 - Focuses more on questions about writing style<br><br>
     <input type="text" id="userAnswer9"></input><br><br><br>
   <button class="button" onclick="totalFunction()">Submit</button></label>
-  <p id="results"></p>
+  <p id="results3"></p>
 <br> <br>
 <script>
 var aList = [];
@@ -407,11 +407,11 @@ var userAnswer16 = document.getElementById("userAnswer9").value;
 function checkResults() {
 	console.log(aList.length + " " + bList.length)
 	if (aList.length > bList.length) {
-		document.getElementById("results").innerHTML = "You should take the ACT"
+		document.getElementById("results3").innerHTML = "You should take the ACT"
 	}
 	
 	if (bList.length > aList.length) {
-		document.getElementById("results").innerHTML = "You should take the SAT	"
+		document.getElementById("results3").innerHTML = "You should take the SAT	"
 	}
 
 }
